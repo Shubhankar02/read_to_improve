@@ -27,6 +27,15 @@ app.get('/', (req, res) => {
 	res.render('home');
 });
 
+app.post('/blog', (req,res) => {
+	res.send('Hello World');
+});
+
+// Submit a new blog
+app.get('/new', (req,res) => {
+	res.render('new');
+})
+
 app.get('/:id', (req,res) => {
 	res.send('This is individual post');
 });
